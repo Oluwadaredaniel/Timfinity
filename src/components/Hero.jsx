@@ -5,6 +5,8 @@ import { TbChartLine, TbCurrencyDollar } from 'react-icons/tb'
 import gsap from 'gsap'
 import './Hero.css'
 
+import heroImage from './timfinity.jpg'
+
 const words = ['I', 'Turn', 'Traffic', 'Into', 'Revenue.']
 const accentWords = ['Revenue.']
 
@@ -52,6 +54,7 @@ export default function Hero() {
     <section className="hero">
       {/* Background watermark */}
       <div className="hero-watermark" aria-hidden="true">OT</div>
+
       {/* Green glow orb */}
       <div className="hero-orb" aria-hidden="true" />
 
@@ -112,15 +115,12 @@ export default function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.9, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
         >
-          {/* Photo placeholder */}
+          {/* Photo Frame with REAL IMAGE */}
           <div className="photo-frame">
             <div className="photo-placeholder">
-              <div className="photo-icon">
-                <span style={{ fontSize: '3rem' }}>👤</span>
-                <p>Place your photo here</p>
-                <span className="photo-hint">Recommended: square, high-res, plain background</span>
-              </div>
+              <img src={heroImage} alt="Hero" />
             </div>
+
             {/* Corner accent */}
             <div className="frame-accent tl" />
             <div className="frame-accent br" />
