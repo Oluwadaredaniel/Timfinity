@@ -1,0 +1,59 @@
+.logo-strip {
+  padding: 3rem 0;
+  border-top: 0.5px solid var(--border-2);
+  border-bottom: 0.5px solid var(--border-2);
+  overflow: hidden;
+}
+
+.strip-label {
+  text-align: center;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 1.8rem;
+  font-weight: 600;
+}
+
+.strip-track-wrapper {
+  position: relative;
+}
+
+.strip-overflow { overflow: hidden; }
+
+.strip-track {
+  display: flex;
+  width: max-content;
+  gap: 0;
+}
+
+.strip-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0 2.2rem;
+  white-space: nowrap;
+  color: var(--text-3);
+  border-right: 0.5px solid var(--border-2);
+  transition: color 0.2s;
+}
+.strip-item:hover { color: var(--accent); }
+
+.strip-icon { display: flex; align-items: center; }
+.strip-name { font-size: 0.82rem; font-weight: 500; }
+
+.strip-fade {
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 80px;
+  z-index: 2;
+  pointer-events: none;
+}
+.strip-fade--left {
+  left: 0;
+  background: linear-gradient(to right, var(--bg), transparent);
+}
+.strip-fade--right {
+  right: 0;
+  background: linear-gradient(to left, var(--bg), transparent);
+}

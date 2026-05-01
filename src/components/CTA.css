@@ -1,0 +1,79 @@
+.cta-section {
+  padding: 9rem 0;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg);
+  border-top: 0.5px solid var(--border-2);
+}
+
+.cta-orb {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(5, 223, 114, 0.07) 0%, transparent 65%);
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+.cta-inner {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-tag { justify-content: center; }
+
+.cta-title {
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.06;
+  margin-bottom: 1.4rem;
+}
+
+.cta-accent { color: var(--accent); }
+
+.cta-sub {
+  color: var(--text-2);
+  max-width: 480px;
+  margin: 0 auto 2.8rem;
+  font-size: 0.97rem;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+.cta-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.cta-btn { font-size: 0.9rem !important; padding: 0.95rem 2.2rem !important; }
+
+.cta-contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.cta-link {
+  font-size: 0.83rem;
+  color: var(--text-3);
+  transition: color 0.2s;
+}
+.cta-link:hover { color: var(--accent); }
+
+.cta-sep {
+  width: 3px; height: 3px;
+  border-radius: 50%;
+  background: var(--text-3);
+}
+
+.cta-avail {
+  font-size: 0.83rem;
+  color: var(--text-3);
+}
