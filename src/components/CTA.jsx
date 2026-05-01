@@ -131,7 +131,6 @@ ${formData.message}
               <option value="$10,000+">$10,000+</option>
             </select>
 
-            {/* NEW FIELD — CALL TIME */}
             <select name="callTime" onChange={handleChange} required>
               <option value="">Best Time for a Call</option>
               <option value="Morning (9AM - 12PM)">Morning (9AM - 12PM)</option>
@@ -160,6 +159,32 @@ ${formData.message}
           </motion.button>
 
         </form>
+
+        {/* CONTACT OPTIONS */}
+        <div className="cta-contact">
+
+          <a href="mailto:olufem97@gmail.com" className="cta-link">
+            📧 olufem97@gmail.com
+          </a>
+
+          <span className="cta-sep" />
+
+          <a href="tel:+2349167648868" className="cta-link">
+            📞 +234 916 764 8868
+          </a>
+
+          <span className="cta-sep" />
+
+          <a
+            href="https://wa.me/2349167648868?text=Hello%20I%20came%20from%20your%20portfolio%20and%20I%27m%20interested%20in%20working%20with%20you"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cta-link"
+          >
+            💬 WhatsApp
+          </a>
+
+        </div>
 
       </div>
     </section>
