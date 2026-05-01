@@ -1,46 +1,172 @@
 .cta-section {
-  padding: 9rem 0;
+  padding: 10rem 0;
   position: relative;
   overflow: hidden;
   background: var(--bg);
   border-top: 0.5px solid var(--border-2);
 }
 
+/* Ambient glow */
 .cta-orb {
   position: absolute;
-  top: 50%; left: 50%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  width: 700px; height: 700px;
-  background: radial-gradient(circle, rgba(5, 223, 114, 0.07) 0%, transparent 65%);
+  width: 750px;
+  height: 750px;
+  background: radial-gradient(
+    circle,
+    rgba(5, 223, 114, 0.09) 0%,
+    transparent 65%
+  );
   pointer-events: none;
   border-radius: 50%;
+  filter: blur(10px);
+  opacity: 0.9;
 }
 
+/* Layout */
 .cta-inner {
   text-align: center;
   position: relative;
   z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-.cta-tag { justify-content: center; }
+.cta-tag {
+  justify-content: center;
+  margin-bottom: 1.2rem;
+}
 
+/* Title */
 .cta-title {
-  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  font-size: clamp(2.6rem, 5.5vw, 4.8rem);
   font-weight: 800;
-  line-height: 1.06;
+  line-height: 1.05;
   margin-bottom: 1.4rem;
+  letter-spacing: -0.03em;
 }
 
-.cta-accent { color: var(--accent); }
+.cta-accent {
+  color: var(--accent);
+}
 
+/* Subtitle */
 .cta-sub {
   color: var(--text-2);
-  max-width: 480px;
-  margin: 0 auto 2.8rem;
-  font-size: 0.97rem;
+  max-width: 520px;
+  margin: 0 auto 3rem;
+  font-size: 1rem;
   font-weight: 300;
   line-height: 1.8;
 }
+
+/* =========================
+   FORM CORE
+========================= */
+
+.cta-form {
+  max-width: 720px;
+  margin: 0 auto 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* grid inputs */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* inputs + textarea */
+.cta-form input,
+.cta-form select,
+.cta-form textarea {
+  width: 100%;
+  padding: 1rem 1.1rem;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
+  color: var(--text);
+  font-size: 0.92rem;
+  outline: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+/* textarea */
+.cta-form textarea {
+  resize: none;
+  grid-column: 1 / -1;
+  min-height: 140px;
+}
+
+/* =========================
+   DROPDOWN (FIXED + PREMIUM)
+========================= */
+
+.cta-form select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  padding: 1rem 3rem 1rem 1.1rem;
+
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--text-3) 50%),
+    linear-gradient(135deg, var(--text-3) 50%, transparent 50%);
+  background-position:
+    calc(100% - 18px) calc(50% - 3px),
+    calc(100% - 12px) calc(50% - 3px);
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+/* dropdown options (limited browser control but improved contrast) */
+.cta-form select option {
+  background: #0f0f0f;
+  color: #fff;
+}
+
+/* =========================
+   FOCUS STATES
+========================= */
+
+.cta-form input:focus,
+.cta-form select:focus,
+.cta-form textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(5, 223, 114, 0.12);
+  transform: translateY(-1px);
+}
+
+/* placeholders */
+.cta-form input::placeholder,
+.cta-form textarea::placeholder {
+  color: var(--text-3);
+  opacity: 0.8;
+}
+
+/* =========================
+   SUBMIT BUTTON
+========================= */
+
+.cta-submit {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 1rem 2rem !important;
+  font-size: 0.95rem !important;
+  border-radius: 14px !important;
+}
+
+/* =========================
+   ACTION BUTTONS (legacy)
+========================= */
 
 .cta-actions {
   display: flex;
@@ -50,7 +176,14 @@
   margin-bottom: 2.5rem;
 }
 
-.cta-btn { font-size: 0.9rem !important; padding: 0.95rem 2.2rem !important; }
+.cta-btn {
+  font-size: 0.9rem !important;
+  padding: 0.95rem 2.2rem !important;
+}
+
+/* =========================
+   CONTACT
+========================= */
 
 .cta-contact {
   display: flex;
@@ -58,22 +191,48 @@
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
+  margin-top: 1rem;
 }
 
 .cta-link {
-  font-size: 0.83rem;
+  font-size: 0.85rem;
   color: var(--text-3);
-  transition: color 0.2s;
+  transition: all 0.2s ease;
 }
-.cta-link:hover { color: var(--accent); }
+
+.cta-link:hover {
+  color: var(--accent);
+  transform: translateY(-1px);
+}
 
 .cta-sep {
-  width: 3px; height: 3px;
+  width: 4px;
+  height: 4px;
   border-radius: 50%;
   background: var(--text-3);
+  opacity: 0.5;
 }
 
 .cta-avail {
-  font-size: 0.83rem;
+  font-size: 0.85rem;
   color: var(--text-3);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-title {
+    font-size: clamp(2.2rem, 8vw, 3.5rem);
+  }
+
+  .cta-sub {
+    font-size: 0.95rem;
+    padding: 0 1rem;
+  }
 }

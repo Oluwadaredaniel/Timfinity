@@ -3,8 +3,7 @@ import './Industries.css'
 
 const industries = [
   { label: 'E-commerce', tag: 'Core Focus' },
-  { label: 'EdTech / Data Science', tag: 'Enrollments' },
-  { label: 'Health Products', tag: 'High-Converting' },
+  { label: 'Edu-Tech', tag: 'Enrollments' },
   { label: 'Gadgets & Accessories', tag: 'Must-Have' },
   { label: 'Jewelry Brands', tag: 'Emotion-Driven' },
   { label: 'Fashion & Clothing', tag: 'Visibility' },

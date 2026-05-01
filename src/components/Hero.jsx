@@ -85,8 +85,7 @@ export default function Hero() {
 
           <p ref={subRef} className="hero-sub">
             If your ads are getting clicks but not converting, you don't have
-            a traffic problem — you have a strategy problem. I fix that with
-            data-driven Google & Meta ad systems built to scale.
+            a traffic problem — you have a strategy problem. I fix that by combining data, sales psychology, and high-performing ad systems that turn wasted clicks into real revenue.
           </p>
 
           <div ref={ctaRef} className="hero-ctas">

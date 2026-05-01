@@ -9,7 +9,7 @@ const steps = [
   {
     num: '01',
     title: 'Audit & Strategy',
-    desc: 'Analyze your product, audience, current performance, and competitive gaps. We build the roadmap before spending a single naira.',
+    desc: 'Analyze your product, audience, current performance, and competitive gaps. We build the roadmap before spending a single dime.',
   },
   {
     num: '02',
